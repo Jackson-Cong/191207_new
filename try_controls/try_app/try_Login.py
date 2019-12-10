@@ -41,6 +41,22 @@ entry_cleartext = tk.Entry(
 )
 entry_cleartext.place(x=20, y=60)
 
+def cmd_check():
+    u = ety_username.get()
+    print(u)
+    p = ety_password.get()
+    print(p)
+    if u!='123456':
+        tk.messagebox.showinfo(title='Information',
+                                message='Username is wrong')
+    elif p!='123456':
+        tk.messagebox.showinfo(title='Information',
+                                message='Password is wrong')
+    else:
+        tk.messagebox.showinfo(title='Information',
+                                message='Well done')
+    return
+
 
 default_var = tk.StringVar(value='Password')
 entry_cleartext = tk.Entry(
